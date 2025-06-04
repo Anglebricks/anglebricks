@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angle Bricks Construction Ltd</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    header { background: #004080; color: white; padding: 20px; text-align: center; }
+    nav { background: #003366; padding: 10px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    section { padding: 20px; }
+    .services ul { list-style: disc; margin-left: 20px; }
+    footer { background: #004080; color: white; text-align: center; padding: 10px; }
+    .gallery-container { display: flex; flex-wrap: wrap; gap: 10px; }
+    .gallery-container img { width: 100%; max-width: 400px; height: auto; border: 2px solid #ccc; border-radius: 5px; cursor: pointer; transition: transform 0.2s; }
+    .gallery-container img:hover { transform: scale(1.02); }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+    .lightbox-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ANGLE BRICKS CONSTRUCTION LTD</h1>
+    <p>KK 15 ROAD, Rwanda</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Angle Bricks Construction</h2>
+    <p>We bring your building dreams to life — professionally and reliably.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p><strong>Angle Bricks Construction Ltd.</strong> is a fully registered and reputable construction company dedicated to delivering high-quality building solutions across Rwanda. We specialize in residential, commercial, and civil engineering projects — offering end-to-end services from concept design to project completion.</p>
+    <p>With a team of qualified engineers, architects, and skilled technicians, we are committed to transforming our clients’ visions into durable, functional, and aesthetically pleasing structures.</p>
+    <h3>Why Choose Us?</h3>
+    <ul>
+      <li>Professional and experienced team</li>
+      <li>High standards of quality control</li>
+      <li>Transparent budgeting and project timelines</li>
+      <li>Strong client communication and support</li>
+      <li>Commitment to sustainable and safe building practices</li>
+    </ul>
+    <p>📍 Based in Rwanda | 📞 Contact us today to discuss your next project.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Core Services</h2>
+    <ul>
+      <li>Architectural Design & Engineering Consultancy</li>
+      <li>Residential & Commercial Construction</li>
+      <li>Renovation & Remodeling Works</li>
+      <li>Civil Engineering & Infrastructure Projects</li>
+      <li>Site Supervision & Project Management</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+      <img src="images/1B - Copy.jpeg" alt="Construction Project Image" onclick="openLightbox(this.src)" />
+    </div>
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img">
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>Coming soon: articles on construction tips, project highlights, and industry insights.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Tel: +250 788 392 537</p>
+    <p>📧 Email: anglebricksconstruction@yahoo.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Angle Bricks Construction Ltd. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "block";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+</body>
+</html>
